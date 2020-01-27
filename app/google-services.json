@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "803020854588",
+    "firebase_url": "https://psuevents-a744d.firebaseio.com",
+    "project_id": "psuevents-a744d",
+    "storage_bucket": "psuevents-a744d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803020854588:android:dcc17b8ad17698d0aafa39",
+        "android_client_info": {
+          "package_name": "com.example.projerct"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803020854588-lhqssqrm5b612ko1350s4dmg1u655916.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.projerct",
+            "certificate_hash": "81ca9b8a3275404e2cc90438231f0464716283ca"
+          }
+        },
+        {
+          "client_id": "803020854588-inkn2ahbaq20ck4gpd0um45i4mme7002.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmJvTMzUuSBE8FljyuZSXLktXDh-yWWng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803020854588-inkn2ahbaq20ck4gpd0um45i4mme7002.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

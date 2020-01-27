@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+<!--HomePage-->
+    <color name="colorGreenCyan">#0d5d5f</color>
+    <color name="colorTealBlue">#3a8a8c</color>
+    <color name="colorRedDevil">#860012</color>
+    <color name="colorDeepCarmine">#b32e3f</color>
+    <color name="colorTenne">#c65d05</color>
+    <color name="colorCadmiumOrange">#f38a32</color>
+    <color name="colorDarkGoldenrod">#c58502</color>
+    <color name="colorSaffron">#f2b230</color>
+    <color name="colorLightSeaGreen">#16a3a5</color>
+    <color name="colorMediumTurquoise">#43d0d2</color>
+<!--AdminPage-->
+    <color name="colorFlame">#e4572e</color>
+    <color name="colorTiffanyBlue">#17bebb</color>
+</resources>
