@@ -50,10 +50,10 @@ public class AdminActivity extends AppCompatActivity {
     }
 
     private void signinAccount(){
-        String email, password;
+        final String email, password;
         email = emailUI.getText().toString();
         password = passwordUI.getText().toString();
-        mEmail = email;
+        mEmail = email.substring(0,email.indexOf("@"));
 
         if(TextUtils.isEmpty(email)){
             Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_SHORT).show();

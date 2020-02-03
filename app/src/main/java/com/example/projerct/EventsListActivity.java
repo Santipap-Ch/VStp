@@ -7,13 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.List;
 
 public class EventsListActivity extends AppCompatActivity {
     private Button addBtn, deleteBtn;
     private RecyclerView mRecyclerView;
-    private String mEmail = getIntent().getStringExtra("mEmail");
+    private String mEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,9 @@ public class EventsListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent add = new Intent(EventsListActivity.this,AddEventsActivity.class);
-                add.putExtra("mEmail",mEmail);
+                mEmail = getIntent().getStringExtra("email");
+                //Toast.makeText(getApplicationContext(), "Sign in successful"+mEmail, Toast.LENGTH_SHORT).show();
+                add.putExtra(Intent.EXTRA_TEXT,mEmail);
                 startActivity(add);
             }
         });

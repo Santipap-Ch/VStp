@@ -25,7 +25,7 @@ public class AddEventsActivity extends AppCompatActivity {
     private Button add;
     private DatabaseReference reff;
     private Event event;
-    private String mEnail = getIntent().getStringExtra("mEmail");
+    //private String mEmail;
     Calendar c;
     DatePickerDialog dpd;
 
@@ -38,7 +38,9 @@ public class AddEventsActivity extends AppCompatActivity {
 
         event = new Event();
 
-        reff = FirebaseDatabase.getInstance().getReference().child("Events");
+        String mEmail = getIntent().getStringExtra(Intent.EXTRA_TEXT);
+        Toast.makeText(getApplicationContext(), "Sign in successful"+mEmail, Toast.LENGTH_SHORT).show();
+        reff = FirebaseDatabase.getInstance().getReference().child(mEmail);
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
