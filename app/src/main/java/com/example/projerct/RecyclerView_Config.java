@@ -1,8 +1,11 @@
 package com.example.projerct;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,11 +31,34 @@ public class RecyclerView_Config {
 
         private String key;
 
+        private String eventname, building, floor, room, description,date, timestart, timeend;
+
+        private String email;
+
         public EventItempView(ViewGroup parent){
             super(LayoutInflater.from(mContext).inflate(R.layout.event_list_item,parent,false));
             mDate = (TextView) itemView.findViewById(R.id.date_txtView);
             mNameEvent = (TextView) itemView.findViewById(R.id.nameEvent_txtView);
             mLocation = (TextView) itemView.findViewById(R.id.location_txtView);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext,EventUpdateActivity.class);
+                    intent.putExtra("key",key);
+                    intent.putExtra("eventname",eventname);
+                    intent.putExtra("building",building);
+                    intent.putExtra("floor",floor);
+                    intent.putExtra("room",room);
+                    intent.putExtra("description",description);
+                    intent.putExtra("date",date);
+                    intent.putExtra("timestart",timestart);
+                    intent.putExtra("timeend",timeend);
+                    intent.putExtra("email",email);
+
+                    mContext.startActivity(intent);
+                }
+            });
 
         }
         public void  bind(Event event,String key){
@@ -40,6 +66,15 @@ public class RecyclerView_Config {
             mNameEvent.setText(event.getEventName());
             mLocation.setText(event.getBuilding()+event.getFloor()+event.getRoom());
             this.key = key;
+            this.eventname = event.getEventName();
+            this.building = event.getBuilding();
+            this.floor = event.getFloor();
+            this.room = event.getRoom();
+            this.description = event.getDescription();
+            this.date = event.getDate();
+            this.timestart = event.getTimeStart();
+            this.timeend = event.getTimeEnd();
+            this.email = event.getEmail();
         }
     }
     class  EventsAdapter extends RecyclerView.Adapter<EventItempView>{

@@ -35,13 +35,6 @@
                     android:background="@color/colorCadmiumOrange"
                     android:layout_margin="3dp"
                     android:text="Add"/>
-                <Button
-                    android:id="@+id/delete"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorMediumTurquoise"
-                    android:layout_margin="3dp"
-                    android:text="Delete"/>
             </LinearLayout>
         </LinearLayout>
 

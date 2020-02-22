@@ -38,8 +38,8 @@ public class AddEventsActivity extends AppCompatActivity {
 
         event = new Event();
 
-        String mEmail = getIntent().getStringExtra(Intent.EXTRA_TEXT);
-        Toast.makeText(getApplicationContext(), "Sign in successful"+mEmail, Toast.LENGTH_SHORT).show();
+        final String mEmail = getIntent().getStringExtra(Intent.EXTRA_TEXT);
+//        Toast.makeText(getApplicationContext(), "Sign in successful"+mEmail, Toast.LENGTH_SHORT).show();
         reff = FirebaseDatabase.getInstance().getReference().child(mEmail);
 
         add.setOnClickListener(new View.OnClickListener() {
@@ -53,12 +53,13 @@ public class AddEventsActivity extends AppCompatActivity {
                 event.setTimeStart(timestart.getText().toString().trim());
                 event.setTimeEnd(timeend.getText().toString().trim());
                 event.setDescription(description.getText().toString().trim());
+                event.setEmail(mEmail);
 
                 reff.push().setValue(event);
 
                 Intent eventslist = new Intent(AddEventsActivity.this,EventsListActivity.class);
                 startActivity(eventslist);
-                Toast.makeText(getApplicationContext(), "Data inserted successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Data inserted successfully", Toast.LENGTH_LONG).show();
             }
         });
 

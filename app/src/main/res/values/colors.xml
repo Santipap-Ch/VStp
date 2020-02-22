@@ -17,4 +17,6 @@
 <!--AdminPage-->
     <color name="colorFlame">#e4572e</color>
     <color name="colorTiffanyBlue">#17bebb</color>
+<!--UpadtePage-->
+    <color name="colorSmokyTopaz">#944141</color>
 </resources>

@@ -10,6 +10,7 @@ public class Event {
     private String TimeStart;
     private String Description;
     private String TimeEnd;
+    private String Email;
 
     public Event() {
     }
@@ -87,5 +88,13 @@ public class Event {
 
     public void setTimeEnd(String timeEnd) {
         TimeEnd = timeEnd;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
     }
 }

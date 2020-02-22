@@ -95,4 +95,8 @@ public class AdminActivity extends AppCompatActivity {
         signInBtn = (Button) findViewById(R.id.signIn);
         signUpBtn = (TextView) findViewById(R.id.signUp);
     }
+
+    public String getmEmail() {
+        return mEmail;
+    }
 }

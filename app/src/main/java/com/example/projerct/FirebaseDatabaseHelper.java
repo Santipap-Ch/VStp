@@ -2,6 +2,7 @@ package com.example.projerct;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,9 +23,9 @@ public class FirebaseDatabaseHelper {
         void DataIsUpdated();
         void DataIsDeleted();
     }
-    public FirebaseDatabaseHelper() {
+    public FirebaseDatabaseHelper(String mEmail) {
         mDatabase = FirebaseDatabase.getInstance();
-        mReferenceEvents = mDatabase.getReference("Events");
+        mReferenceEvents = mDatabase.getReference(mEmail);
     }
 
     public void readEvents(final DataStatus dataStatus){
@@ -44,6 +45,24 @@ public class FirebaseDatabaseHelper {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+    }
+
+    public void updateEvent(String key, Event event, final DataStatus dataStatus){
+        mReferenceEvents.child(key).setValue(event).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                dataStatus.DataIsUpdated();
+            }
+        });
+    }
+
+    public void deletEvent(String key,final DataStatus dataStatus){
+        mReferenceEvents.child(key).setValue(null).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                dataStatus.DataIsDeleted();
             }
         });
     }
