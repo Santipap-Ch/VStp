@@ -14,9 +14,14 @@
     <color name="colorSaffron">#f2b230</color>
     <color name="colorLightSeaGreen">#16a3a5</color>
     <color name="colorMediumTurquoise">#43d0d2</color>
+
 <!--AdminPage-->
     <color name="colorFlame">#e4572e</color>
     <color name="colorTiffanyBlue">#17bebb</color>
+
 <!--UpadtePage-->
     <color name="colorSmokyTopaz">#944141</color>
+
+<!--    SearchMap-->
+
 </resources>

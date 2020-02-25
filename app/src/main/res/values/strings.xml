@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PSU Events</string>
     <string name="report">แจ้งปัญหา</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

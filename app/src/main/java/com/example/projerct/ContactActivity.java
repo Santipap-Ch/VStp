@@ -53,7 +53,7 @@ public class ContactActivity extends AppCompatActivity {
                 sendEmail.putExtra(Intent.EXTRA_EMAIL,new String[]{"santepap.chairee@gmail.com"});
                 sendEmail.putExtra(Intent.EXTRA_SUBJECT,subject);
                 sendEmail.putExtra(Intent.EXTRA_TEXT,
-                        "name: "+name+'\n'+"Email ID: "+email+'\n'+"Message:"+'\n'+message);
+                        "เรื่อง: "+subject+'\n'+"Message:"+'\n'+message+'\n'+'\n'+name);
 
                 startActivity(Intent.createChooser(sendEmail,"Send email..."));
             }
