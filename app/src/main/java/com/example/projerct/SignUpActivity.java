@@ -65,7 +65,7 @@ public class SignUpActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(getApplicationContext(), "Registration successful", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Registration successful", Toast.LENGTH_LONG).show();
                             Intent admin = new Intent(SignUpActivity.this,AdminActivity.class);
                             startActivity(admin);
                         }

@@ -83,7 +83,7 @@ public class EventUpdateActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void DataIsInserted() {
+                    public void DataIsInserted(List<Event> events, List<String> keys) {
 
                     }
 
@@ -110,7 +110,7 @@ public class EventUpdateActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void DataIsInserted() {
+                    public void DataIsInserted(List<Event> events, List<String> keys) {
 
                     }
 

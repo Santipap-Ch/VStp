@@ -56,13 +56,13 @@ public class AdminActivity extends AppCompatActivity {
         mEmail = email.substring(0,email.indexOf("@"));
 
         if(TextUtils.isEmpty(email)){
-            Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_LONG).show();
             emailUI.setError("Please enter email");
             emailUI.requestFocus();
             return;
         }
         if(TextUtils.isEmpty(password)){
-            Toast.makeText(getApplicationContext(), "Please enter password...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Please enter password...", Toast.LENGTH_LONG).show();
             passwordUI.setError("Please enter password");
             passwordUI.requestFocus();
             return;
@@ -72,7 +72,7 @@ public class AdminActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(), "Sign in successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Sign in successful", Toast.LENGTH_LONG).show();
                     Intent listEvents = new Intent(AdminActivity.this, EventsListActivity.class);
                     listEvents.putExtra("email",mEmail);
                     startActivity(listEvents);

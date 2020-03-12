@@ -45,7 +45,7 @@ public class SearchActivity extends AppCompatActivity {
                 map.putExtra("lat",location.getLatitude());
                 map.putExtra("lng",location.getLongtitude());
                 map.putExtra("name",location.getName());
-                Toast.makeText(getApplicationContext(),""+location.getLocation(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),location.getLocation()+"\n"+location.getName(), Toast.LENGTH_SHORT).show();
                 startActivity(map);
             }
         });
